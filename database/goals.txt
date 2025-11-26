@@ -1,0 +1,7 @@
+{
+    "savings_target": {
+        "type": "Savings Target",
+        "target_amount": 600000000,
+        "target_date": ""
+    }
+}
