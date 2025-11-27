@@ -131,7 +131,7 @@ def export_transactions_json():
 
 def export_monthly_report():
     load_transactions()
-    load_budgets_analytics()
+    load_budgets_analytics(console)
 
     report = {}
     today = datetime.date.today()
@@ -406,6 +406,16 @@ def data_validation():
 
         if t.type == "Expense" and t.category not in BUDGET_CATEGORIES:
             issues.append(f"Transaction {i+1}: Unknown expense category {t.category}")
+
+    # Validate Budgets
+    load_budgets_analytics(console) # Pass console
+    for category, budget_obj in budgets_analytics.items(): # Use budgets_analytics
+        if not all([budget_obj.category, budget_obj.amount is not None]):
+            issues.append(f"Budget for '{category}': Missing fields")
+        if not isinstance(budget_obj.amount, int):
+            issues.append(f"Budget for '{category}': Amount must be int")
+        if budget_obj.category not in BUDGET_CATEGORIES:
+            issues.append(f"Budget for '{category}': Unknown category {budget_obj.category}")
 
     if issues:
         console.print(

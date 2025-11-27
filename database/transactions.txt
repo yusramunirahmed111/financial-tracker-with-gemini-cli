@@ -1,0 +1,9 @@
+[
+    {
+        "date": "2025-11-27",
+        "type": "Expense",
+        "category": "Food",
+        "description": "",
+        "amount": 60000000
+    }
+]

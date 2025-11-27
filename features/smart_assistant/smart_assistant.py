@@ -30,7 +30,7 @@ def save_goals():
 
 def daily_financial_check():
     load_transactions()
-    load_budgets()
+    load_budgets(console)
 
     today = datetime.date.today()
     
@@ -55,7 +55,7 @@ def daily_financial_check():
 
 def generate_smart_recommendations():
     load_transactions()
-    load_budgets()
+    load_budgets(console)
 
     today = datetime.date.today()
     current_month_start = today.replace(day=1)
@@ -106,7 +106,7 @@ def generate_smart_recommendations():
 
 def check_spending_alerts():
     load_transactions()
-    load_budgets()
+    load_budgets(console)
 
     alerts = []
     today = datetime.date.today()
@@ -150,7 +150,7 @@ def check_spending_alerts():
 
 def analyze_savings_opportunities():
     load_transactions()
-    load_budgets()
+    load_budgets(console)
 
     opportunities = []
     today = datetime.date.today()

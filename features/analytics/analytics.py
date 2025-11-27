@@ -197,7 +197,7 @@ def savings_analysis():
 
 def financial_health_score():
     load_transactions()
-    load_budgets_data()
+    load_budgets_data(console)
     
     today = datetime.date.today()
     current_month_start = today.replace(day=1)
@@ -289,7 +289,7 @@ def financial_health_score():
 
 def comprehensive_report():
     load_transactions()
-    load_budgets_data()
+    load_budgets_data(console)
 
     today = datetime.date.today()
     current_month_start = today.replace(day=1)
