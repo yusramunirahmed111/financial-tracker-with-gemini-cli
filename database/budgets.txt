@@ -1,0 +1,14 @@
+[
+    {
+        "category": "Shopping",
+        "amount": 5000000000
+    },
+    {
+        "category": "Bills",
+        "amount": 3000000
+    },
+    {
+        "category": "Transport",
+        "amount": 8000000
+    }
+]

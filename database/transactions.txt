@@ -1,9 +1,16 @@
 [
     {
-        "date": "2025-11-27",
+        "date": "2025-11-29",
         "type": "Expense",
         "category": "Food",
         "description": "",
-        "amount": 60000000
+        "amount": 12345670000000000
+    },
+    {
+        "date": "2025-11-29",
+        "type": "Income",
+        "category": "Salary",
+        "description": "",
+        "amount": 900000000000000917504
     }
 ]
